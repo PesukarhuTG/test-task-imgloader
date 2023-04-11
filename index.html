@@ -7,24 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Picture</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script/index.js" defer></script>
+  <script src="script/index.js" type="module"></script>
 </head>
 
 <body>
   <main class="main">
-    <section class="settings">
-      <div>
-        <label class="settings__button settings__button_file" for="file">File</label>
-        <input id="file" class="settings__input-file" type="file" name="file" accept="image/*, .png, .jpg, .jpeg" />
+    <section class="controls">
+      <div class="settings">
+        <div>
+          <label class="settings__button settings__button_file" for="file">File</label>
+          <input id="file" class="settings__input-file" type="file" name="file" accept="image/*, .png, .jpg, .jpeg" />
+        </div>
+        <button class="settings__button settings__button_root">Tree</button>
+        <button class="settings__button settings__button_system" disabled>System</button>
+        <button class="settings__button settings__button_picker" disabled>Picker</button>
+        <button class="settings__button settings__button_dimensions" disabled>Dimensions</button>
       </div>
-      <button class="settings__button settings__button_root">Tree</button>
-      <button class="settings__button settings__button_system" disabled>System</button>
-      <button class="settings__button settings__button_picker" disabled>Picker</button>
-      <button class="settings__button settings__button_dimensions" disabled>Dimensions</button>
+
+      <div class="root root_blur"></div>
+
     </section>
 
+
     <section class="picture">
-      <img class="picture__img" src="map.jpg" alt="shoosed picture">
+      <img class="picture__img" src="assets/map.jpg" alt="shoosed picture">
     </section>
 
     <section class="description">
@@ -52,7 +58,7 @@
           </tr>
           <tr class="description__row">
             <td class="description__col">file path</td>
-            <td class="description__col description__col_path">c:\\temp</td>
+            <td class="description__col description__col_path">...</td>
           </tr>
         </tbody>
       </table>
