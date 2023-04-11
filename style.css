@@ -55,6 +55,12 @@ body {
   font-weight: 700;
   text-align: center;
   cursor: pointer;
+  transition: 0.2s all;
+}
+
+.settings__button:active {
+  background-color: #c0bebe;
+  transform: translate(2px, 2px);
 }
 
 .settings__button:disabled {
@@ -67,7 +73,7 @@ body {
 
 .settings__button_file {
   display: inline-block;
-  width: 100%;
+  width: 90px;
   font-size: 13px;
 }
 
@@ -158,6 +164,9 @@ body {
 .description__table, .description__col {
   border: 1px solid #595959;
   border-collapse: collapse;
+}
+
+th {
   text-align: center;
 }
 
@@ -166,5 +175,31 @@ body {
 }
 
 .description__col_value {
-  width: 150px;
+  min-width: 150px;
+  max-width: 300px;
+}
+
+@media (max-width: 1280px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controls {
+    gap: 30px;
+  }
+
+  .picture {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    font-size: 14px;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
 }
