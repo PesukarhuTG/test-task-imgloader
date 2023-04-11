@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Picture</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script/index.js" defer></script>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
     <section class="settings">
       <div>
         <label class="settings__button settings__button_file" for="file">File</label>
-        <input id="file" class="settings__input-file" type="file" name="file" accept=".png, .jpg, .jpeg" />
+        <input id="file" class="settings__input-file" type="file" name="file" accept="image/*, .png, .jpg, .jpeg" />
       </div>
       <button class="settings__button settings__button_root">Tree</button>
       <button class="settings__button settings__button_system" disabled>System</button>
@@ -32,26 +33,28 @@
           <td class="description__col">Key</td>
           <td class="description__col description__col_value">Value</td>
         </thead>
-        <tr class="description__row">
-          <td class="description__col">file name</td>
-          <td class="description__col">map</td>
-        </tr>
-        <tr class="description__row">
-          <td class="description__col">file format</td>
-          <td class="description__col">png</td>
-        </tr>
-        <tr class="description__row">
-          <td class="description__col">file create</td>
-          <td class="description__col">23/12/2020</td>
-        </tr>
-        <tr class="description__row">
-          <td class="description__col">file path</td>
-          <td class="description__col">c:\\temp</td>
-        </tr>
-        <tr class="description__row">
-          <td class="description__col">owner</td>
-          <td class="description__col">User777</td>
-        </tr>
+        <tbody>
+          <tr class="description__row">
+            <td class="description__col">file name</td>
+            <td class="description__col description__col_name">...</td>
+          </tr>
+          <tr class="description__row">
+            <td class="description__col">file format</td>
+            <td class="description__col description__col_type">...</td>
+          </tr>
+          <tr class="description__row">
+            <td class="description__col">file size</td>
+            <td class="description__col description__col_size">...</td>
+          </tr>
+          <tr class="description__row">
+            <td class="description__col">file create</td>
+            <td class="description__col description__col_date">...</td>
+          </tr>
+          <tr class="description__row">
+            <td class="description__col">file path</td>
+            <td class="description__col description__col_path">c:\\temp</td>
+          </tr>
+        </tbody>
       </table>
 
     </section>
